@@ -31,19 +31,25 @@
 #nav {
   padding: 20px 0 40px 0  ;
   background: #e74e12;
+  width: 100vw;
+  
 }
 
 #nav a {
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
-  padding: 0 20px;
+  padding: 20px 20px;
   font-family: 'Poppins', sans-serif;
+  padding: 20px 20px 15px 20px;
+  background: #e74e12;
 }
 
 #nav a.router-link-exact-active {
   color: #ffffff;
-  background-color: #2c3e50
+  background-color: #22cbb4;
+  border-left: solid 1px #000;
+  border-right: solid 1px #000; 
 }
 
 #nav #left{
