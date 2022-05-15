@@ -1,6 +1,6 @@
 <template>
   <div class = "home-intro">
-      <img src="../assets/home-intro.jpeg" alt="Home bg intro" id = "home-image">
+      <img src="../../assets/home-intro.jpeg" alt="Home bg intro" id = "home-image">
       <div class = "home-text">
         <h3>Looking for Professional Design ?</h3>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae voluptatibus harum tenetur reiciendis odio autem animi, sit quos illo quas.</p>
