@@ -15,17 +15,18 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .container{
-    width: 100%;
+    width: 100vw;
     display: grid;
-    grid-template-columns: 400px 400px 400px;
+    grid-template-columns: 30% 40% 30%;
     grid-template-rows: max-content;
     grid-column-gap:0px;
     grid-row-gap:0px;
     justify-content:center;
     margin-bottom: 50px;
+    margin: 0;
 }
 
 .container div{

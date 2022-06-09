@@ -1,16 +1,29 @@
 <template>
-  <h1>This is Product Page</h1>
+  <div class = "products">
+    <ProductIntro/>
+    <ProductGrid/>
+  </div>
 </template>
 
 <script>
+
+import ProductIntro from '../components/Products/ProductIntro.vue'
+import ProductGrid from '../components/Products/ProductGrid.vue'
+
 export default {
     name: 'Products',
-    component: {
-        
+    components: {
+        ProductIntro,
+        ProductGrid
     }
 }
 </script>
 
-<style>
+<style scoped>
+
+*{
+  overflow-x: hidden;
+}
+
 
 </style>

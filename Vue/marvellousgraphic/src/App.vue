@@ -3,7 +3,20 @@
 
     <div id="left">
     <router-link to="/">Home</router-link>
-    <router-link to="/products">Products</router-link>
+    <router-link to="/products" class = "prod-nav">Products
+    <div class = "pro-dropdown">
+      <ul>
+        <li>Frames</li>
+        <li>Mugs</li>
+        <li>T-Shirts</li>
+        <li>Gift Items</li>
+        <li>Wedding Photography</li>
+        <li>Business Cards</li>
+        <li>Certificates</li>
+        <li>Banners</li>
+      </ul>
+    </div>
+    </router-link>
     </div>
     <div id = "rect-logo-bg">
       <div id="logo-nav"></div>
@@ -21,11 +34,12 @@
 <script>
 
 import Home from './views/Home.vue'
+import Products from './views/Products.vue'
 
 export default {
 
 
-  components: { Home },
+  components: { Home, Products },
 
   data() {
     
@@ -112,6 +126,7 @@ export default {
     border-style: solid;
     border-radius: 20px 50px;
     border-color: #EF0E32 transparent transparent ;
+    z-index: 1;
 }
 
 
@@ -125,6 +140,37 @@ export default {
   background-image: url("assets/mg-logo.png");
   background-size: cover;
   z-index: 1;
+}
+
+.pro-dropdown{
+  position: relative;
+  width: 20px;
+  padding: 10px 20px;
+  top: 60px;
+  margin-left: 90px;
+  background-color: #F85C5C;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 0 0 1px 1px;
+  border-radius: 5px;
+  display:none;
+}
+
+.prod-nav:hover .pro-dropdown{
+  position: absolute;
+  display: block;
+  width: 200px;
+  transition: width 2s ease-in;
+  /* currently not working transition */  
+}
+
+.pro-dropdown ul li{
+  list-style-type:  none;
+  text-align: left;
+  padding: 5px 10px;
+  color: #fff;
+  font-weight: 550;
+  
 }
 
 </style>

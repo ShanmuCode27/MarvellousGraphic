@@ -1,16 +1,18 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <AboutView/>
   </div>
 </template>
 
 
 <script>
 
+import AboutView from '../components/About/AboutView.vue'
+
 export default {
   name: 'About',
   components: {
-    
+    AboutView
   }
 }
 </script>
