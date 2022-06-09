@@ -7,7 +7,7 @@
     <div class = "pro-dropdown">
       <ul>
         <li>Frames</li>
-        <li>Mugs</li>
+        <li><router-link to="/products/mugs">Mugs</router-link></li>
         <li>T-Shirts</li>
         <li>Gift Items</li>
         <li>Wedding Photography</li>
@@ -145,7 +145,7 @@ export default {
 .pro-dropdown{
   position: relative;
   width: 20px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   top: 60px;
   margin-left: 90px;
   background-color: #F85C5C;
@@ -155,6 +155,7 @@ export default {
   border-radius: 5px;
   display:none;
 }
+
 
 .prod-nav:hover .pro-dropdown{
   position: absolute;
@@ -171,6 +172,25 @@ export default {
   color: #fff;
   font-weight: 550;
   
+}
+
+.pro-dropdown ul li a{
+  list-style-type:  none;
+  text-align: left !important;
+  padding: 5px 10px !important;
+  color: #fff !important;
+  font-weight: 550 !important;
+  background-color: #F85C5C !important;
+  
+}
+
+
+.pro-dropdown ul li:hover{
+  background-color: #22cbb4;
+}
+
+.pro-dropdown ul li a:hover{
+  background-color: #22cbb4 !important;
 }
 
 </style>

@@ -31,20 +31,22 @@
             <div class="list">
                 <div>
                     <ul>
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                        <li>Item 4</li>
-                        <li>Item 5</li>
+                        <li>Duro Frames</li>
+                        <li>Glass Frames</li>
+                        <li>Normal Mugs</li>
+                        <li>Magic Mugs</li>
+                        <li>Inner Color Mugs</li>
+                        <li>Double Color Mugs</li>
                     </ul>
                 </div>
                 <div>
                     <ul>
-                        <li>Item 6</li>
-                        <li>Item 7</li>
-                        <li>Item 8</li>
-                        <li>Item 9</li>
-                        <li>Item 10</li>
+                        <li>Tshirt Print</li>
+                        <li>Invitation Cards</li>
+                        <li>Visiting Cards</li>
+                        <li>Albums</li>
+                        <li>Customized Greeting Cards</li>
+                        <li>Bag Print</li>
                     </ul> 
                 </div>
             </div>
