@@ -48,8 +48,8 @@ export default {
     grid-auto-rows: 300px;
 
     width: 100vw;
-    grid-column-gap:20px;
-    grid-row-gap:20px;
+    grid-column-gap:40px;
+    grid-row-gap:40px;
     justify-content:center;
     margin-bottom: 100px;
 
@@ -68,6 +68,7 @@ export default {
 
 .container>div{
     border: solid 2px #000;
+    border-radius: 10px;
 }
 
 .container>div>div{

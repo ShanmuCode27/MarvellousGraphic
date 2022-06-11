@@ -1,18 +1,24 @@
 <template>
     <div class="container">
         <div class="title">
-            Testimonial
+            {{title}}
         </div>
         <div class="slide">
         <splide :options="options">
             <splide-slide>
-            <img src="image1.jpg">
+            <img src="../../assets/homeprodgrid/1.jpg">
             </splide-slide>
             <splide-slide>
-            <img src="image2.jpg">
+            <img src="../../assets/homeprodgrid/2.jpg">
             </splide-slide>
             <splide-slide>
-            <img src="image3.jpg">
+            <img src="../../assets/homeprodgrid/3.jpg">
+            </splide-slide>
+            <splide-slide>
+            <img src="../../assets/homeprodgrid/4.jpg">
+            </splide-slide>
+            <splide-slide>
+            <img src="../../assets/homeprodgrid/5.jpg">
             </splide-slide>
         </splide>
         </div>
@@ -34,9 +40,10 @@ export default {
 
    data() {
       return {
+        title: 'What our Customers Say',
         options: {
           rewind : true,
-          width  : 800,
+          width  : 1000,
           gap    : '1rem',
         },
       };
@@ -49,6 +56,18 @@ export default {
 
 .slide{
     width: 100vw;
+    padding-left: 250px;
+    margin-bottom: 100px;
 }
 
+img{
+    width: 200px;
+}
+
+.title{
+    font-size: 30px;
+    margin-bottom: 100px;
+    font-family: 'Jost';
+    font-weight: bold;
+}
 </style>
