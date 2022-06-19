@@ -1,4 +1,5 @@
 <template>
+<div id = "scroll" v-dragscroll.x="true">
   <div class = "container">
       <div class = "item1">1</div>
       <div  class = "item2">2</div>
@@ -12,19 +13,34 @@
       <div  class = "item10">10</div>
       <div  class = "item11">11</div>
   </div>
+</div>
 
 </template>
 
 <script>    
+import { dragscroll } from 'vue-dragscroll'
+
 export default {
+    name: 'HomeImageGrid',
+    directives: {
+    'dragscroll': dragscroll
+  },
 
 }
 </script>
 
 <style scoped>
+#scroll {
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+#scroll::-webkit-scrollbar{
+    display:none;
+}
 
 .container{
-    width: 100vw;
+    width: 200vw;
     display: grid;
     grid-template-columns: 30% 20% 30% 20%;
     grid-template-rows: 300px 300px 300px 300px;
@@ -32,6 +48,7 @@ export default {
     grid-row-gap:0px;
     justify-content:center;
     margin-bottom: 100px;
+
 }
 
 .container div{

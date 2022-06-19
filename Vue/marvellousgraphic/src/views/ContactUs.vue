@@ -1,10 +1,15 @@
 <template>
-  <h1>This is Contact us </h1>
+  <ContactIcon />
 </template>
 
 <script>
+import ContactIcon from '../components/Contact/ContactIcon.vue';
+
 export default {
-    name : 'ContactUs'
+    name : 'ContactUs',
+    components: {
+      ContactIcon
+    }
 }
 </script>
 
