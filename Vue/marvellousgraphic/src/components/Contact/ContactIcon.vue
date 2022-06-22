@@ -10,10 +10,28 @@
         </div>
         <p>Or</p>
         <h4>Send us a message</h4>
+
+        <div class = "form">
+            <form action = "../../../getMessage.php" method = "POST">
+                <table>
+                    <tr>
+                        <td>Your Email</td>
+                        <td><input type = "email" name = "email" /></td>
+                    </tr>
+                    <tr>
+                        <td>Message</td>
+                        <td><input type = "email" name = "email" id = "message" multiline /></td>
+                    </tr>
+                    <tr>
+                        <td><input type = "submit" name = "submit" value = "Send" id = "button" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
     </div>
 </template>
 
-<style>
+<style scoped>
 
 .container{
     padding: 50px 10px;
@@ -70,4 +88,38 @@
     color: rgb(129, 101, 47);
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 0%;
+
+}
+
+#message{
+    width: 200px;
+    height: 100px;
+}
+
+input {
+    padding: 10px;
+}
+
+table{
+    margin-left: 40%;
+}
+
+table td{
+    padding-top: 40px !important;
+}
+
+#button{
+    margin: auto;
+    width: 100px;
+    height: 30px;
+    margin-left: 100%;
+    background: #90E5F8;
+    border-radius: 10px;
+    border: solid 0.5px #ddd;
+}
 </style>

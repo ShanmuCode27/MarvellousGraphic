@@ -2,7 +2,7 @@
   <div class = "container">
       <div class = "card" v-for = "card in cards" :key = "card.id" >
           <div class = "card-image">
-              <img :src = "require(card.img).default"/>
+              <img :src = "require('../../assets/' + card.img + '.jpg')" />
              {{ card.id }}
              
           </div>
@@ -33,7 +33,6 @@ export default {
                 { id: 4, img: '../../assets/mg-logo.jpg', name : '10 x 12 Duro Frame', buttonTitle: 'Check Price'}
             ],
 
-            selectedIndex : 0
         }
     }
 }
