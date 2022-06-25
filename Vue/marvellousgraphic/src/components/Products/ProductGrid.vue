@@ -2,12 +2,10 @@
   <div class = "container">
       <div class = "card" v-for = "card in cards" :key = "card.id" >
           <div class = "card-image">
-           {{ changeImg = '../../../public/images/' + card.img }}
               <!-- <img v-bind:src = "'../../assets/' + card.img" /> -->
               <!-- <img v-bind:src = "require('../../assets' + card.img)" /> -->
-              <img :src = "changeImg" />
-             {{ card.id }}
-             
+              <img :src = "require(`../../assets/${card.img}`)">
+              <!-- <img :src = "changeImg" /> -->
           </div>
           <div class = "card-title">
               {{ card.name }}
@@ -31,11 +29,12 @@ export default {
         return{
             cards: [
                 { id: 1, img: 'frame-intro.jpg', name : '6 x 8 Duro Frame', buttonTitle: 'Check Price'},
-                { id: 2, img: '../../assets/home-intro.jpg', name : '8 x 10 Duro Frame', buttonTitle: 'Check Price'},
-                { id: 3, img: '../../assets/mg-logo.jpg', name : '8 x 12 Duro Frame', buttonTitle: 'Check Price'},
-                { id: 4, img: '../../assets/mg-logo.jpg', name : '10 x 12 Duro Frame', buttonTitle: 'Check Price'}
+                { id: 2, img: 'home-intro.jpeg', name : '8 x 10 Duro Frame', buttonTitle: 'Check Price'},
+                { id: 3, img: 'mg-logo.png', name : '8 x 12 Duro Frame', buttonTitle: 'Check Price'},
+                { id: 4, img: 'mg-logo.png', name : '10 x 12 Duro Frame', buttonTitle: 'Check Price'},
+                { id: 5, img: 'logo.png', name : '10 x 12 Duro Frame', buttonTitle: 'Check Price'},
+                 
             ],
-            changeImg : '',
             image : "'../../../public/images/' + card.img"
 
 
@@ -57,16 +56,17 @@ export default {
 .container .card{
     width: 300px;
     height: 300px;
-    border: solid 2px #000;
+    border: solid 0.5px #000;
+    border-radius: 5px;
 }
 
 .card .card-image{
-    /* background-image: url("../../assets/about-cust.jpg"); */
+
 }
 
 .card .card-image img{
     width: 100%;
-    height: 100%;
+    height: 220px;
 }
 
 .card .card-title{
@@ -83,6 +83,7 @@ export default {
     letter-spacing: 2px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 15px;
+    border: 0.1px solid #000;
 }   
 
 </style>

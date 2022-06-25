@@ -1,10 +1,17 @@
 <template>
-  <h1>This is Request Quote</h1>
+  <ReqForm />
 </template>
 
 <script>
+
+import ReqForm from '../components/ReqQuote/ReqForm.vue';
+
+
 export default {
-    name : 'RequestQuote'
+    name : 'RequestQuote',
+    components: {
+      ReqForm
+    }
 }
 </script>
 
