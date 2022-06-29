@@ -2,7 +2,7 @@
   <div class = "container">
       <div class = "card" v-for = "card in cards" :key = "card.id" >
           <div class = "card-image">
-              <img :src = "card.img"/>
+              <img :src = "require(`../../assets/${card.img}`)"/>
              {{ card.id }}
              
           </div>
@@ -28,12 +28,11 @@ export default {
         return{
             cards: [
                 { id: 1, img: 'frame-intro.jpg', name : '6 x 8 Duro Frame', buttonTitle: 'Check Price'},
-                { id: 2, img: '../../assets/home-intro.jpg', name : '8 x 10 Duro Frame', buttonTitle: 'Check Price'},
-                { id: 3, img: '../../assets/mg-logo.jpg', name : '8 x 12 Duro Frame', buttonTitle: 'Check Price'},
-                { id: 4, img: '../../assets/mg-logo.jpg', name : '10 x 12 Duro Frame', buttonTitle: 'Check Price'}
+                { id: 2, img: 'home-intro.jpeg', name : '8 x 10 Duro Frame', buttonTitle: 'Check Price'},
+                { id: 3, img: 'mg-logo.png', name : '8 x 12 Duro Frame', buttonTitle: 'Check Price'},
+                { id: 4, img: 'mg-logo.png', name : '10 x 12 Duro Frame', buttonTitle: 'Check Price'}
             ],
 
-            selectedIndex : 0
         }
     }
 }

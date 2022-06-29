@@ -19,12 +19,13 @@ export default {
     width: 100vw;
     height:60vh;
     overflow: hidden;
-    position: absolute;
+    position: relative;
+    margin-top: -50px;
 }
 
 .container #frame-background{
     
-    margin-top: -100px;
+    margin-top: -150px;
     height:180%;
     width:100%;
     background-size: contain;

@@ -51,6 +51,8 @@ export default {
     grid-template-columns: auto auto auto auto;
     grid-gap: 20px 30px;
     padding: 10px 50px;
+    margin-top: 0px;
+    margin-bottom: 100px;
 }
 
 .container .card{

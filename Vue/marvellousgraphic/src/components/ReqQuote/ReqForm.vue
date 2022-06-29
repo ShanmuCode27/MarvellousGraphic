@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <h1>Get Quote</h1>
-        <form method = "POST" id = "my-form">
+        <form ref="form" @submit.prevent="sendEmail">
                 <label>Choose Products</label>
                 <select name = "option">
                     <option>Item 1</option>
@@ -23,11 +23,14 @@
                 <label>Name</label>
                 <input type = "text" name = "name" placeholder = "Enter Name or Company" />
 
+                <label>Contact Number</label>
+                <input type = "text" name = "contact" placeholder = "Enter Name or Company" />
+
 
                 <label>Message</label>
                 <textarea name = "message" cols = "10" rows = "6" />
 
-                <button type = "submit" @click="submitForm">Send</button>
+                <button type = "submit">Send</button>
             
         </form>
     </div>
@@ -40,7 +43,6 @@ import emailjs from 'emailjs-com';
 
 export default {
 
-  name: 'ContactUs',
     data() {
         return {
             option: '',
@@ -48,8 +50,10 @@ export default {
             date: '',
             name: '',
             email: '',
-            message: ''
-        },
+            message: '',
+            contact: ''
+        }
+    },
     methods: {
     sendEmail(e) {
       try {
@@ -60,7 +64,8 @@ export default {
             date: this.date,
             name: this.name,
             email: this.email,
-            message: this.message
+            message: this.message,
+            contact: this.contact
 
         }).then( function (res) {
             alert("Sent successfully ! " + res.status);
@@ -75,8 +80,9 @@ export default {
         this.date = '',
         this.name =  '',
         this.email =  '',
-        this.message =  ''
-    },
+        this.message =  '',
+        this.contact = ''
+    
   }
 }
 
