@@ -6,20 +6,21 @@
         <div class="slide">
         <splide :options="options">
             <splide-slide>
-            <img src="../../assets/homeprodgrid/1.jpg">
+            <img src="../../assets/testimonial/testimonial-1.jpg">
             </splide-slide>
+
             <splide-slide>
-            <img src="../../assets/homeprodgrid/2.jpg">
+            <img src="../../assets/testimonial/testimonial-1.jpg">
             </splide-slide>
+
             <splide-slide>
-            <img src="../../assets/homeprodgrid/3.jpg">
+            <img src="../../assets/testimonial/testimonial-1.jpg">
             </splide-slide>
+
             <splide-slide>
-            <img src="../../assets/homeprodgrid/4.jpg">
+            <img src="../../assets/testimonial/testimonial-1.jpg">
             </splide-slide>
-            <splide-slide>
-            <img src="../../assets/homeprodgrid/5.jpg">
-            </splide-slide>
+            
         </splide>
         </div>
     </div>
@@ -52,7 +53,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .slide{
     width: 100vw;
@@ -60,8 +61,11 @@ export default {
     margin-bottom: 100px;
 }
 
+
 img{
-    width: 200px;
+    width: 600px;
+    border-radius: 20px;
+    border: solid 0.1px #000;
 }
 
 .title{
@@ -69,5 +73,9 @@ img{
     margin-bottom: 100px;
     font-family: 'Jost';
     font-weight: bold;
+}
+
+ul {
+    top: 400px !important;
 }
 </style>

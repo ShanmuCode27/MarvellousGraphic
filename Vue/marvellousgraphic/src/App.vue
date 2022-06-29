@@ -241,6 +241,7 @@ footer{
 .footer-logo img{
   width: 150px;
   left: 0;
+  border-radius: 0 !important;
 }
 
 .link{

@@ -4,7 +4,7 @@ import About from '../views/About.vue'
 import Products from '../views/Products.vue'
 import ContactUs from '../views/ContactUs.vue'
 import RequestQuote from '../views/RequestQuote.vue'
-import ProductsMugs from '../components/Products/ProductsMugs.vue'
+import Mugs from '../components/Products/Mugs/Mugs.vue'
 
 const routes = [
   {
@@ -38,8 +38,8 @@ const routes = [
   },
   {
     path: '/products/mugs',
-    name: 'productsMugs',
-    component: ProductsMugs
+    name: 'ProductsMugs',
+    component: Mugs
   }
 ]
 
