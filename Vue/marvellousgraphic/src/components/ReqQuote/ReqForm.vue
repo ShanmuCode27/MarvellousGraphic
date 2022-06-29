@@ -1,9 +1,9 @@
 <template>
     <div class="container">
         <h1>Get Quote</h1>
-        <form ref="form" @submit.prevent="sendEmail">
+        <form method = "POST" id = "my-form">
                 <label>Choose Products</label>
-                <select name = "option" v-model="option">
+                <select name = "option">
                     <option>Item 1</option>
                     <option>Item 2</option>
                     <option>Item 3</option>
@@ -11,24 +11,23 @@
                 </select>
 
                 <label>Quantity </label>
-                <input type = "number" name = "quantity" placeholder = " Choose Quantity" min = "1"  v-model="quantity" />
+                <input type = "number" name = "quantity" placeholder = " Choose Quantity" min = "1"/>
 
                 <label>Required Date</label>
-                <input type = "date" name = "date"  v-model="date" />
+                <input type = "date" name = "date"/>
 
                 <label>Email</label>
-                <input type = "email" name = "email" placeholder = "Enter Email"  v-model="email" />
+                <input type = "email" name = "email" placeholder = "Enter Email" />
 
 
                 <label>Name</label>
-                <input type = "text" name = "name" placeholder = "Enter Name or Company"  v-model="name"/>
+                <input type = "text" name = "name" placeholder = "Enter Name or Company" />
 
 
                 <label>Message</label>
-                <textarea name = "message" cols = "10" rows = "6"  v-model="message" />
+                <textarea name = "message" cols = "10" rows = "6" />
 
-                <button type = "submit">Send</button>
-            
+                <button type = "submit" @click="submitForm">Send</button>
             
         </form>
     </div>
@@ -39,10 +38,9 @@
 import emailjs from 'emailjs-com';
 
 
-
 export default {
 
-    name: 'ContactUs',
+  name: 'ContactUs',
     data() {
         return {
             option: '',
@@ -51,8 +49,7 @@ export default {
             name: '',
             email: '',
             message: ''
-        }
-    },
+        },
     methods: {
     sendEmail(e) {
       try {
@@ -84,6 +81,7 @@ export default {
 }
 
 
+}
 </script>
 
 <style>
