@@ -33,6 +33,7 @@ export default {
                 { id: 3, img: 'mg-logo.png', name : '8 x 12 Duro Frame', buttonTitle: 'Check Price'},
                 { id: 4, img: 'mg-logo.png', name : '10 x 12 Duro Frame', buttonTitle: 'Check Price'},
                 { id: 5, img: 'logo.png', name : '10 x 12 Duro Frame', buttonTitle: 'Check Price'},
+                { id: 5, img: 'logo.png', name : '10 x 12 Duro Frame', buttonTitle: 'Check Price'},
                  
             ],
             image : "'../../../public/images/' + card.img"
@@ -46,7 +47,6 @@ export default {
 <style scoped>
 
 .container{
-    margin-top: 500px;
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-gap: 20px 30px;

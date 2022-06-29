@@ -1,9 +1,9 @@
 <template>
     <div class="container">
         <h1>Get Quote</h1>
-        <form method = "POST" action = "">
+        <form ref="form" @submit.prevent="sendEmail">
                 <label>Choose Products</label>
-                <select>
+                <select name = "option" v-model="option">
                     <option>Item 1</option>
                     <option>Item 2</option>
                     <option>Item 3</option>
@@ -11,23 +11,23 @@
                 </select>
 
                 <label>Quantity </label>
-                <input type = "number" name = "quantity" placeholder = " Choose Quantity" min = "1" />
+                <input type = "number" name = "quantity" placeholder = " Choose Quantity" min = "1"  v-model="quantity" />
 
                 <label>Required Date</label>
-                <input type = "date" name = "date"/>
+                <input type = "date" name = "date"  v-model="date" />
 
                 <label>Email</label>
-                <input type = "email" name = "email" placeholder = "Enter Email" />
+                <input type = "email" name = "email" placeholder = "Enter Email"  v-model="email" />
 
 
                 <label>Name</label>
-                <input type = "text" name = "name" placeholder = "Enter Name or Company" />
+                <input type = "text" name = "name" placeholder = "Enter Name or Company"  v-model="name"/>
 
 
                 <label>Message</label>
-                <textarea name = "message" cols = "10" rows = "6" />
+                <textarea name = "message" cols = "10" rows = "6"  v-model="message" />
 
-                <button type = "submit" >Send</button>
+                <button type = "submit">Send</button>
             
             
         </form>
@@ -35,9 +35,55 @@
 </template>
 
 <script>
+
+import emailjs from 'emailjs-com';
+
+
+
 export default {
 
+    name: 'ContactUs',
+    data() {
+        return {
+            option: '',
+            quantity: '',
+            date: '',
+            name: '',
+            email: '',
+            message: ''
+        }
+    },
+    methods: {
+    sendEmail(e) {
+      try {
+        emailjs.sendForm('service_ruah5zo', 'template_4udh34v', this.$refs.form, 'EjBnmCoHomHUCl070',
+        {
+            option: this.option,
+            quantity: this.quantity,
+            date: this.date,
+            name: this.name,
+            email: this.email,
+            message: this.message
+
+        }).then( function (res) {
+            alert("Sent successfully ! " + res.status);
+        })  
+
+      } catch(error) {
+          console.log({error})
+      }
+      // Reset form field
+        this.option = '',
+        this.quantity =  '',
+        this.date = '',
+        this.name =  '',
+        this.email =  '',
+        this.message =  ''
+    },
+  }
 }
+
+
 </script>
 
 <style>
