@@ -8,8 +8,18 @@
       <router-link to="/products" class = "prod-nav">Products
       <div class = "pro-dropdown">
         <ul>
-          <li>Frames</li>
-          <li><router-link to="/products/mugs">Mugs</router-link></li>
+          <li>Frames
+              <ul class = "inner-ul">
+                <li>Duro Frame</li>
+                <li><router-link to="/products/mugs">Glass Frame</router-link></li>
+              </ul>
+          </li>
+          <li><router-link to="/products/mugs">Mugs</router-link>
+              <ul class = "inner-ul">
+                  <li>Magic Mug</li>
+                  <li><router-link to="/products/mugs">Normal Mug</router-link></li>
+              </ul>
+          </li>
           <li>T-Shirts</li>
           <li>Gift Items</li>
           <li>Wedding Photography</li>
@@ -47,7 +57,7 @@
       </div>
       <div class="link">
             <div class="things">
-              <a href="#">Products ></a>
+              <a href="#">Products</a>
               <a href="#">About Us</a>
               <a href="#">Contact Us</a>
         </div>
@@ -186,8 +196,8 @@ export default {
 
 .pro-dropdown{
   position: relative;
-  width: 20px;
-  padding: 10px 10px;
+  /* width: 20px; */
+  padding: 10px 0px;
   top: 60px;
   margin-left: 90px;
   background-color: #F85C5C;
@@ -222,12 +232,12 @@ export default {
   padding: 5px 10px !important;
   color: #fff !important;
   font-weight: 550 !important;
-  background-color: #F85C5C !important;
+  background-color: transparent !important;
   
 }
 
 
-.pro-dropdown ul li:hover{
+.pro-dropdown ul li:hover, .pro-dropdown ul li a{
   background-color: #22cbb4;
 }
 
@@ -235,6 +245,24 @@ export default {
   background-color: #22cbb4 !important;
 }
 
+.inner-ul{
+  position: absolute;
+  width: 200px;
+  padding: 10px 0px;
+  /* top: 0px; */
+  margin-left: 90px;
+  margin-top: -40px;
+  background-color: #F85C5C;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 0 0 1px 1px;
+  border-radius: 5px;
+  display:none;
+}
+.pro-dropdown > ul > li:hover .inner-ul{
+  display:block;
+  margin-left: 190px;
+}
 
 footer{
   background-color: #38141A;

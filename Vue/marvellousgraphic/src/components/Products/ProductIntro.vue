@@ -17,7 +17,7 @@ export default {
 
 .container{
     width: 100vw;
-    height:60vh;
+    height:80vh;
     overflow: hidden;
     position: relative;
     margin-top: -50px;

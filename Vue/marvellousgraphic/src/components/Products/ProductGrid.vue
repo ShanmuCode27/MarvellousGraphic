@@ -47,8 +47,9 @@ export default {
 <style scoped>
 
 .container{
+    width: 100vw;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 21% 21% 21% 21%;
     grid-gap: 20px 30px;
     padding: 10px 50px;
     margin-top: 0px;
@@ -60,6 +61,10 @@ export default {
     height: 300px;
     border: solid 0.5px #000;
     border-radius: 5px;
+    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card .card-image{
@@ -72,20 +77,40 @@ export default {
 }
 
 .card .card-title{
-    padding: 10px;
-    font-style: italic;
+    font-style: normal;
+    font-family: Poppins;
+    font-size: 1rem;
 }
 
-.card .button button{
-    padding: 10px;
+.card .button{
     width: 100%;
+    height: 40px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    border: solid 0.2px #000;
+
+}   
+
+
+.card .button button{
+    width: 100%;
+    height: 100%;
     background-color: #59D3BD;
     color: #fff;
     font-weight: bold;
     letter-spacing: 2px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 15px;
-    border: 0.1px solid #000;
-}   
+    border: none;
+} 
+
+.card .button button:hover{
+    background-color: #000;
+    transition: background-color  .5s ease-in-out;
+    cursor: pointer;
+}
 
 </style>
