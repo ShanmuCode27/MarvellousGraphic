@@ -64,7 +64,7 @@ export default {
 <style scoped>
 
 .container{
-    
+
 }
 
 section{
@@ -168,7 +168,12 @@ section{
     list-style-type: none;
     font-family: 'Jost', sans-serif;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
+    font-style: italic;
+    color: rgb(19, 0, 0);
 }
 
+p{
+    color: rgb(61, 25, 25);
+}
 </style>

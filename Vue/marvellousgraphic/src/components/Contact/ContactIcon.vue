@@ -12,15 +12,15 @@
         <h4>Send us a message</h4>
 
         <div class = "form">
-            <form action = "../../../getMessage.php" method = "POST">
+            <form ref="form" @submit.prevent="sendEmail">
                 <table>
                     <tr>
                         <td>Your Email</td>
-                        <td><input type = "email" name = "email" /></td>
+                        <td><input type = "email" name = "email" placeholder = "your email here"/></td>
                     </tr>
                     <tr>
                         <td>Message</td>
-                        <td><input type = "email" name = "email" id = "message" multiline /></td>
+                        <td><input type = "text" name = "message" id = "message" placeholder="message" multiline /></td>
                     </tr>
                     <tr>
                         <td><input type = "submit" name = "submit" value = "Send" id = "button" /></td>
@@ -30,6 +30,48 @@
         </div>
     </div>
 </template>
+
+<script>
+
+import emailjs from 'emailjs-com';
+
+
+export default {
+
+    data() {
+        return {
+            email: '',
+            message: ''
+        }
+    },
+    methods: {
+    sendEmail(e) {
+      try {
+        emailjs.sendForm('service_ruah5zo', 'template_ld3l4gr', this.$refs.form, 'EjBnmCoHomHUCl070',
+        {
+            email: this.email,
+            message: this.message,
+
+        }).then( function (res) {
+            alert("Sent successfully ! " + res.status);
+        })  
+
+      } catch(error) {
+          console.log({error})
+      }
+      // Reset form field
+ 
+        this.name =  '',
+        this.email =  ''
+    
+  }
+}
+
+
+}
+</script>
+
+
 
 <style scoped>
 
@@ -93,6 +135,7 @@
     flex-direction: column;
     padding: 20px;
     margin-left: 0%;
+    justify-content: center;
 
 }
 
@@ -103,23 +146,47 @@
 
 input {
     padding: 10px;
+    width: 200px;
+    height: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+#message{
+    padding: 0px 10px;
+}
+
+input:focus{
+    outline-style: solid;
+    outline-width: 3px;
+    outline-color: #90E5F8;
 }
 
 table{
-    margin-left: 40%;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+table > tr{
+    display: flex;
+    justify-content: center;
 }
 
 table td{
-    padding-top: 40px !important;
+    width: 100px;
+    padding: 40px 20px!important;
 }
 
 #button{
     margin: auto;
-    width: 100px;
+    width: 200px;
     height: 30px;
-    margin-left: 100%;
+    padding: 5px;
     background: #90E5F8;
     border-radius: 10px;
     border: solid 0.5px #ddd;
+    font-weight: bold;
+    font-weight: 800;
+    font-family: 'Jost',sans-serif;
 }
 </style>

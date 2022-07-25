@@ -40,7 +40,7 @@ export default {
 }
 
 .container{
-    width: 200vw;
+    width: 100vw;
     display: grid;
     grid-template-columns: 30% 20% 30% 20%;
     grid-template-rows: 300px 300px 300px 300px;

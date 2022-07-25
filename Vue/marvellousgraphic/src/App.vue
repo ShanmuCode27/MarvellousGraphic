@@ -1,5 +1,6 @@
 <template>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <div id="nav">
 
     <div id="left">
@@ -63,6 +64,7 @@
         </div>
       </div>
   </footer>
+  </div>
 </template>
 
 <script>
@@ -94,6 +96,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+ background-color: #f95476;
+ background-image: linear-gradient(62deg, #f95476 3%, #e9a2ee 84%);
+
+
+
+
+
 }
 
 *{
@@ -245,9 +254,13 @@ footer{
 }
 
 .link{
-  padding-top: 100px;
-  padding-left: 100px;
+  /* padding-top: 100px;
+  padding-left: 100px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 
 .footer-logo .details{
@@ -267,12 +280,9 @@ footer{
 }
 
 
-.list{
-  
-}
 
 .things{
-
+  justify-self: center;
 }
 
  .things a{
@@ -284,8 +294,8 @@ footer{
 .connect{
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
-  padding-left: 200px;
+  /* padding-top: 100px;
+  padding-left: 200px; */
   color: #aaa;
 }
 

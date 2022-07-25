@@ -57,7 +57,9 @@ export default {
 
 .slide{
     width: 100vw;
-    padding-left: 250px;
+    display: flex;
+    justify-content: center;
+    /* padding-left: 250px; */
     margin-bottom: 100px;
 }
 
